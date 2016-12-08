@@ -1,0 +1,4 @@
+boto3==1.4.1
+Flask==0.11.1
+imgurpython==1.1.7
+simplejson==3.10.0
