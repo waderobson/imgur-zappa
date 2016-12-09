@@ -23,7 +23,7 @@ s3_link = "https://{bucket}.s3.amazonaws.com/{key}"
 app = Flask(__name__)
 
 def random_image():
-    """returns a random animated image from imagr"""
+    """returns a random animated image from imgur"""
     gallery = client.gallery_random(page=0)
     for image in gallery:
         if not image.is_album and image.animated:

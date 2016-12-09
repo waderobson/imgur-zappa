@@ -1,27 +1,27 @@
 ## What is this?
-Using imgur's API to upload random gifs store them in S3, and store the metadata in dynamodb. Designed to run using [zappa](www.zappa.io) (AWS Lambda + API gateway) but can be run as as a normal Flask application.
+Using imgur's API to upload random gifs to S3, and store the metadata in dynamodb. Designed to run using [zappa](www.zappa.io) (AWS Lambda + API gateway) but can be run as a normal Flask application.
 
 ## Requirements
 * AWS account
-* imgur api keys - you can get those [here](https://api.imgur.com/oauth2/addclient)
+* imgur api keys - you can get those [here](http://imgur.com/register/api_anon)
 * virtualenv
 * [zappa](www.zappa.io) (optional if deploying to lambda)
 * Dynamodb table
 * S3 bucket
 
 ## Setup
-Create Dynamodb table with the primary key of `id`.  
+Create Dynamodb table with the primary key of `"id"`  
 Create S3 bucket
 
 Download this project and install requirements to virtualenv
 ```
-git clone
+git clone https://github.com/waderobson/imgur-zappa.git
 cd imgur-zappa
 virtualenv env
 source env/bin/activate
 pip install -r requirements.txt
 ```
-Assign values for the following in imgur_zappa.py;
+Assign values for the following in imgur_zappa.py
 ```
 # imgur api keys
 imgur_client_id = ''
